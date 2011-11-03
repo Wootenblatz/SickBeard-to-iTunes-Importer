@@ -50,9 +50,15 @@ while 1 == 1
   `find #{sb_lib} -iname *\.mkv -o -iname *\.avi -o -iname *\.wmv`.each do |f|
     filename = get_filename(f)
     info = create_show_details(filename)
-    results = `find #{it_lib} -iname "*#{get_itunes_title(info)}\.m4v"`.chomp
+    search_size = 0
+    # This comment is legacy code for my personal library and the previous naming conventions
+    #["*#{get_itunes_title(info)}\.m4v", "*#{filename.gsub(/\W/,"*")}\.m4v", "*#{get_title(info)}\.m4v"].each do |p|
+    ["*#{get_itunes_title(info)}\.m4v"].each do |p|
+        results = `find #{it_lib} -iname "#{p}"`.chomp
+    	search_size += results.size
+    end
 
-    if results.size == 0
+    if search_size == 0
        file_list.push(f.chomp)
     end
   end
