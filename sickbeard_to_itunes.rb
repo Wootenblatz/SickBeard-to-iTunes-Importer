@@ -33,7 +33,7 @@ end
 def get_episode_number(info)
     if info[1] =~ /\./
       parts = info[1].split(".")
-      "#{parts[1]} - #{parts[2]}"
+      "#{parts[1]}#{parts[2]}"
     else
       info[1].split("x").last
     end
