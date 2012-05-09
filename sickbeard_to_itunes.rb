@@ -10,7 +10,6 @@ video_quality_video_quality_preset = config["video_quality_video_quality_preset"
 handbrake_options = config["handbrake_options"]
 nice_command = config["nice_command"]
 
-
 # The code, no need to edit any of this unless you know what you're doing!
 def get_filename(path)
     path.split("/").last.split(".").first.chomp

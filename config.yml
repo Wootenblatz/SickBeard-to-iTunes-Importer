@@ -1,5 +1,11 @@
+# If any of your paths have spaces in their names you must put the entire path
+# in between quotes.  Each space should also be preceded by a double backslash
+# 
+# Example: 
+# itunes_path: "/Volumes/External\\ Drive/Media\\ Files/iTunes"
+
 # Path to your SickBeard library
-sickbeard_download_location: /Volumes/500GB/Sick\\ Beard
+sickbeard_download_location: "/Volumes/500GB/Sick\\ Beard"
 
 # Path to your iTunes library
 itunes_path: /Volumes/2TB/iTunes
@@ -17,7 +23,7 @@ temporary_output_path: /Users/zach/Movies/
 video_quality_preset: AppleTV 2
 
 # Other options for HandBrake
-handbrake_options: 
+handbrake_options: "" 
 
 # Unix priority 19 will give up priority so your computer isn't _as_ slow
 nice_command: /usr/bin/nice -n 19
