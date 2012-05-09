@@ -1,9 +1,12 @@
 This script uses HandBrakeCLI and Applescript to convert an mkv, avi or wmv and then import it into iTunes.
 
-Edit the variables at the top of the script to tell it where to find your iTunes and SickBeard library.  In addition you can pass more options into HandBrakeCLI as well as change the target preset that it uses for quality.  Consult the HandBrake GUI to find out what the various options are.
+Edit the variables in the config.yml before running this ruby script.
 
 I have some code in the program that is meant to support older file naming methods which is why it does two different calls to the find command.  
 
 After something is imported into iTunes, it is up to you to archive the episodes in SickBeard and remove them from your filesystem.
+
+This program is meant to run constantly and will find new files as they show up.  
+I find that running it in a screen session is most convienent.
 
 HandBrake CLI can be downloaded here: http://handbrake.fr/downloads2.php
