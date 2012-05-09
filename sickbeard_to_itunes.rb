@@ -1,6 +1,6 @@
 require 'yaml'
 
-config = YAML.load_file("config.yaml")
+config = YAML.load_file("config.yml")
 sickbeard_download_location = config["sickbeard_download_location"]
 itunes_path = config["itunes_path"]
 organized_itunes = config["organized_itunes"]
