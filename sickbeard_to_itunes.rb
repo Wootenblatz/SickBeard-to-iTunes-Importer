@@ -29,8 +29,10 @@ end
 def get_season_number(info)
     if info[1] =~ /\./
        info[1].split(".").first
-    else
-        info[1].split("x").first
+    elsif info[1] =~ /x/i
+        info[1].downcase.split("x").first
+    elsif info[1] =~ /s(\d+?)e(\d+?)/i
+	$1
     end
 end
 
@@ -38,8 +40,10 @@ def get_episode_number(info)
     if info[1] =~ /\./
       parts = info[1].split(".")
       "#{parts[1]}#{parts[2]}"
-    else
-      info[1].split("x").last
+    elsif info[1] =~ /x/i
+      info[1].downcase.split("x").last
+    elsif info[1] =~ /s(\d+?)e(\d+?)/i
+      $2
     end
 end
 
