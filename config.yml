@@ -1,0 +1,25 @@
+# Path to your SickBeard library
+sickbeard_download_location: /Volumes/500GB/Sick\\ Beard
+
+# Path to your iTunes library
+itunes_path: /Volumes/2TB/iTunes
+
+# iTunes copies imported files
+organized_itunes: true
+
+# Where you have HandBrakeCLI installed
+path_to_handbrake: /Applications/
+
+# Temporary path your m4v files should end up before being imported to iTunes
+temporary_output_path: /Users/zach/Movies/
+
+# Target quality for HandBrake
+video_quality_preset: AppleTV 2
+
+# Other options for HandBrake
+handbrake_options: 
+
+# Unix priority 19 will give up priority so your computer isn't _as_ slow
+nice_command: /usr/bin/nice -n 19
+
+
