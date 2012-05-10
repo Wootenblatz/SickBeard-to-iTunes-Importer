@@ -27,24 +27,28 @@ def get_title(info)
 end
 
 def get_season_number(info)
+    season = ""
     if info[1] =~ /\./
-       info[1].split(".").first
-    elsif info[1] =~ /x/i
-        info[1].downcase.split("x").first
-    elsif info[1] =~ /s(\d+?)e(\d+?)/i
-	$1
+       season = info[1].split(".").first
+    elsif info[1].downcase =~ /x/
+       season = info[1].downcase.split("x").first
+    elsif info[1].downcase =~ /^s(\d+)e(\d+)$/
+       season = $1
     end
+    return season
 end
 
 def get_episode_number(info)
+    episode = ""
     if info[1] =~ /\./
       parts = info[1].split(".")
-      "#{parts[1]}#{parts[2]}"
-    elsif info[1] =~ /x/i
-      info[1].downcase.split("x").last
-    elsif info[1] =~ /s(\d+?)e(\d+?)/i
-      $2
+      episode = "#{parts[1]}#{parts[2]}"
+    elsif info[1].downcase =~ /x/
+      episode = info[1].downcase.split("x").last
+    elsif info[1].downcase =~ /^s(\d+)e(\d+)$/
+      episode = $2
     end
+    return episode
 end
 
 def get_itunes_title(info)
