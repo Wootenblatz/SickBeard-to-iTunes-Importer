@@ -6,7 +6,7 @@ itunes_path = config["itunes_path"]
 organized_itunes = config["organized_itunes"]
 path_to_handbrake = config["path_to_handbrake"]
 temporary_output_path = config["temporary_output_path"]
-video_quality_video_quality_preset = config["video_quality_video_quality_preset"]
+video_quality_preset = config["video_quality_preset"]
 handbrake_options = config["handbrake_options"]
 nice_command = config["nice_command"]
 
